@@ -6,6 +6,10 @@ _Stability: 1 - [Experimental](https://github.com/tristanls/stability-index#stab
 
 Normal vector and a distance function to determine central angle between normal vectors.
 
+## Contributors
+
+[@tristanls](https://github.com/tristanls), [@mikedeboer](https://github.com/mikedeboer)
+
 ## Installation
 
     npm install n-vector
@@ -47,9 +51,14 @@ The _non-singular_ aspect of n-vector makes the calculations required simple and
 
 **Public API**
 
+  * [NVector.DEGREES_TO_RADIANS](#nvectordegrees_to_radians)
   * [NVector.distance(a, b)](#nvectordistancea-b)
   * [NVector.fromLatLon(latitude, longitude)](#nvectorfromlatlonlatitude-longitude)
   * [new NVector(x, y, z)](#new-nvectorx-y-z)
+
+#### NVector.DEGREES_TO_RADIANS
+
+  * `DEGREES_TO_RADIANS`: _Number_ 0.0174532925, multiplier to convert decimal degrees into radians.
 
 #### NVector.distance(a, b)
 
