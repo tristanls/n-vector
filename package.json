@@ -1,6 +1,6 @@
 {
   "name": "n-vector",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Normal vector and distance for a sphere",
   "scripts": {
     "sketch": "node scripts/sketch.js",
