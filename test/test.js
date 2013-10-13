@@ -33,14 +33,12 @@ OTHER DEALINGS IN THE SOFTWARE.
 
 var NVector = require('../index.js');
 
-var DEGREES_TO_RADIANS = 0.0174532925;
-
 var test = module.exports = {};
 
 test['n-vector x component is sin(latitude[in radians])'] = function (test) {
     test.expect(1);
     var v = NVector.fromLatLon(31.565665, -96.811523);
-    test.equal(v.x, Math.sin(31.565665 * DEGREES_TO_RADIANS));
+    test.equal(v.x, Math.sin(31.565665 * NVector.DEGREES_TO_RADIANS));
     test.done();
 };
 
@@ -49,7 +47,7 @@ test['n-vector y component is sin(longitude[in radians]) * cos(latitude[in radia
     var v = NVector.fromLatLon(31.565665, -96.811523);
     test.equal(
         v.y, 
-        Math.sin(-96.811523 * DEGREES_TO_RADIANS) * Math.cos(31.565665 * DEGREES_TO_RADIANS));
+        Math.sin(-96.811523 * NVector.DEGREES_TO_RADIANS) * Math.cos(31.565665 * NVector.DEGREES_TO_RADIANS));
     test.done();
 };
 
@@ -58,7 +56,7 @@ test['n-vector z component is -1 * cos(longitude[in radians]) * cos(latitude[in 
     var v = NVector.fromLatLon(31.565665, -96.811523);
     test.equal(
         v.z, 
-        -1 * Math.cos(-96.811523 * DEGREES_TO_RADIANS) * Math.cos(31.565665 * DEGREES_TO_RADIANS));
+        -1 * Math.cos(-96.811523 * NVector.DEGREES_TO_RADIANS) * Math.cos(31.565665 * NVector.DEGREES_TO_RADIANS));
     test.done();
 };
 

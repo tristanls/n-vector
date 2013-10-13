@@ -30,8 +30,6 @@ OTHER DEALINGS IN THE SOFTWARE.
 */
 "use strict";
 
-var DEGREES_TO_RADIANS = 0.0174532925;
-
 /*
   * `x`: _Number_ NVector "x" component.
   * `y`: _Number_ NVector "y" component.
@@ -45,6 +43,8 @@ var NVector = module.exports = function NVector (x, y, z) {
     self.y = y;
     self.z = z;
 };
+
+NVector.DEGREES_TO_RADIANS = 0.0174532925;
 
 /*
   * `a`: _NVector_ First normal vector.
@@ -77,8 +77,8 @@ NVector.distance = function distance (a, b) {
   * Return: _NVector_ Normal vector corresponding to given latitude and longitude.
 */
 NVector.fromLatLon = function fromLatLon (latitude, longitude) {
-    latitude = latitude * DEGREES_TO_RADIANS;
-    longitude = longitude * DEGREES_TO_RADIANS;
+    latitude = latitude * NVector.DEGREES_TO_RADIANS;
+    longitude = longitude * NVector.DEGREES_TO_RADIANS;
     return new NVector(
         Math.sin(latitude),
         Math.sin(longitude) * Math.cos(latitude),
