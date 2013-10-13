@@ -1,0 +1,23 @@
+{
+  "name": "n-vector",
+  "version": "0.1.0",
+  "description": "Normal vector and distance for a sphere",
+  "scripts": {
+    "sketch": "node scripts/sketch.js",
+    "test": "node scripts/test.js"
+  },
+  "main": "index.js",
+  "devDependencies": {
+    "nodeunit": "0.8.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:tristanls/node-n-vector.git"
+  },
+  "keywords": [
+    "n-vector",
+    "great circle distance"
+  ],
+  "author": "Tristan Slominski <tristan.slominski@gmail.com>",
+  "license": "MIT"
+}
